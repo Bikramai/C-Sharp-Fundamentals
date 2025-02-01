@@ -1,13 +1,16 @@
 ﻿using System;
 
 
-namespace Variables
+namespace TypeConversion
+
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            const float Pi = 3.14f;
+            byte b = 1;
+            int i = b;
+            Console.WriteLine(i);
         }
     }
 
