@@ -1,22 +1,21 @@
 ﻿using System;
+using Hello_World.Math;
 
-
-namespace Operators
-
-
+namespace Classes
 {
+
     internal class Program
     {
         static void Main(string[] args)
         {
-            var a = 1;
-            var b = 2;
-            var c = 3;
+            var Bikram = new Person();
+            Bikram.FirstName = "Bikram";
+            Bikram.LastName = "Limbu";
+            Bikram.Introduce();
 
-            Console.WriteLine(c > b && c > a);
-            Console.WriteLine(c > b && c == a);
-            Console.WriteLine(c > b || c == a);
-            Console.WriteLine(!(c > b || c == a));
+            Calculator calculator = new Calculator();
+            var result = calculator.Add(1, 2);
+            Console.WriteLine(result);
 
         }
     }
