@@ -1,31 +1,27 @@
 ﻿using System;
 
-namespace Arrays
+namespace Strings
 {
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            // Array of Int
-            var numbers = new int[3];
-            numbers[0] = 1;
+            var firstName = "Bikram";
+            var lastName = "Limbu";
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            var fullName = firstName + " " + lastName;
 
-            // Array of boolean
-            var flags = new bool[3];
-            flags[0] = true;
+            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
 
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
+            var names = new string[3] { "Ayusha", "Mangi", "Hangsu" };
+            var formattedNames = string.Join(",", names);
 
-            // array of string
-            var nanes = new string[3] { "Ikram", "ayusha", "Mangi" };
-
+            var text = @"Hi Bikram
+Look into the following paths
+c:\folder1\folder2
+c:\folder3\folder4";
+            Console.WriteLine(text);
         }
     }
 
