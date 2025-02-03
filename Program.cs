@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ReferenceAndValueTypes
+namespace Conditionals
 {
     public class Person
     {
@@ -11,13 +11,20 @@ namespace ReferenceAndValueTypes
     {
         static void Main(string[] args)
         {
-            var number = 1;
-            Increment(number);
-            Console.WriteLine(number);
+            int hour = 10;
 
-            var person = new Person() { Age = 20 };
-            MakeOld(person);
-            Console.WriteLine(person.Age);
+            if (hour > 0 && hour < 12)
+            {
+                Console.WriteLine("It's morning.");
+            }
+            else if (hour >= 12 && hour < 18)
+            {
+                Console.WriteLine("It's afternoon.");
+            }
+            else
+            {
+                Console.WriteLine("It's Evening.");
+            }
         }
 
         public static void Increment(int number)
