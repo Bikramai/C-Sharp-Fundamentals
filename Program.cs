@@ -1,27 +1,29 @@
 ﻿using System;
 
-namespace Strings
+namespace Enums
 {
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
+        Express = 3
+    }
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            var firstName = "Bikram";
-            var lastName = "Limbu";
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int)method);
 
-            var fullName = firstName + " " + lastName;
+            var methodId = 3;
+            Console.WriteLine((ShippingMethod)methodId);
 
-            var myFullName = string.Format("My name is {0} {1}", firstName, lastName);
+            Console.WriteLine(method.ToString());
 
-            var names = new string[3] { "Ayusha", "Mangi", "Hangsu" };
-            var formattedNames = string.Join(",", names);
+            var methodName = "Express";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
 
-            var text = @"Hi Bikram
-Look into the following paths
-c:\folder1\folder2
-c:\folder3\folder4";
-            Console.WriteLine(text);
         }
     }
 
