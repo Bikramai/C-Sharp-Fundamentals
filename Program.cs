@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Conditionals
+namespace Forloops 
 {
     public class Person
     {
@@ -11,31 +11,23 @@ namespace Conditionals
     {
         static void Main(string[] args)
         {
-            int hour = 10;
+           for (var i = 1; i <= 10; i++)
+            {
+                if (i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
 
-            if (hour > 0 && hour < 12)
+           for (var i = 10; i >= 1; i--)
             {
-                Console.WriteLine("It's morning.");
-            }
-            else if (hour >= 12 && hour < 18)
-            {
-                Console.WriteLine("It's afternoon.");
-            }
-            else
-            {
-                Console.WriteLine("It's Evening.");
+                if (i%2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
             }
         }
 
-        public static void Increment(int number)
-        {
-            number += 10;
-        }
-
-        public static void MakeOld(Person person)
-        {
-            person.Age += 10;
-        }
     }
 
 }
