@@ -1,30 +1,22 @@
 ﻿using System;
 
-namespace Forloops 
+namespace Foreachloops 
 {
-    public class Person
-    {
-        public int Age;
-    }
-
+  
     internal class Program
     {
         static void Main(string[] args)
         {
-           for (var i = 1; i <= 10; i++)
-            {
-                if (i%2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
-            }
+            var name = "Bikram Subba";
+           
+            //for (var i = 0; i < name.Length; i++)
+            //{
+            //    Console.WriteLine(name[i]);
+            //}
 
-           for (var i = 10; i >= 1; i--)
+            foreach (var character in name)
             {
-                if (i%2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
+                Console.WriteLine(character);
             }
         }
 
