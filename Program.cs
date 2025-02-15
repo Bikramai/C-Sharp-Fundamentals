@@ -7,16 +7,11 @@ namespace Foreachloops
     {
         static void Main(string[] args)
         {
-            var name = "Bikram Subba";
-           
-            //for (var i = 0; i < name.Length; i++)
-            //{
-            //    Console.WriteLine(name[i]);
-            //}
+            var numbers = new int[] { 1, 2, 3, 4, 5 };
 
-            foreach (var character in name)
+            foreach (var number in numbers)
             {
-                Console.WriteLine(character);
+                Console.WriteLine(number);
             }
         }
 
